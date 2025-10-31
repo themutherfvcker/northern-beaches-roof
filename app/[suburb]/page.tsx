@@ -12,7 +12,7 @@ interface SuburbPageProps {
   params: { suburb: string }
 }
 
-export async function generateMetadata({ params }: SuburbPageProps): Promise {
+export async function generateMetadata({ params }: SuburbPageProps): Promise<Metadata> {
   const suburb = getSuburbFromSlug(params.suburb)
   
   return generateSEO({
@@ -39,13 +39,16 @@ export default function SuburbPage({ params }: SuburbPageProps) {
   const schema = generateSuburbSchema(suburb)
 
   return (
-    
-      
-      
-      
-      
-      
-      
-    
+    <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <Hero suburb={suburb} />
+      <Services />
+      <Gallery suburb={suburb} />
+      <Testimonials suburb={suburb} />
+      <Footer />
+    </main>
   )
 }
