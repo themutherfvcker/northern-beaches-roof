@@ -1,0 +1,5 @@
+/* Minimal global styles so layout.ts import resolves */
+:root { --foreground: #111; --background: #fff; }
+* { box-sizing: border-box; }
+html, body { padding: 0; margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--foreground); background: var(--background); }
+a { color: inherit; text-decoration: none; }
