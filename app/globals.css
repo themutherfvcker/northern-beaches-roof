@@ -1,5 +1,60 @@
-/* Minimal global styles so layout.ts import resolves */
-:root { --foreground: #111; --background: #fff; }
-* { box-sizing: border-box; }
-html, body { padding: 0; margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--foreground); background: var(--background); }
-a { color: inherit; text-decoration: none; }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+```
+
+### **5. Check Your File Structure**
+
+Make sure you have these exact folders and files:
+```
+northern-beaches-roof/
+├── app/
+│   ├── [suburb]/
+│   │   └── page.tsx ✅
+│   ├── api/
+│   │   └── leads/
+│   │       └── route.ts ✅
+│   ├── layout.tsx ✅ (NOT layout.ts)
+│   ├── page.tsx ✅
+│   └── globals.css ✅
+├── components/
+│   ├── Hero.tsx ✅
+│   ├── Services.tsx ✅
+│   ├── Gallery.tsx ✅
+│   ├── Testimonials.tsx ✅
+│   ├── LeadForm.tsx ✅
+│   └── Footer.tsx ✅
+├── lib/
+│   ├── supabase.ts ✅
+│   ├── suburbs.ts ✅
+│   └── seo.ts ✅
+├── package.json ✅
+├── tsconfig.json ✅
+├── tailwind.config.ts ✅
+├── next.config.js ✅
+├── postcss.config.js ✅
+└── .gitignore ✅
