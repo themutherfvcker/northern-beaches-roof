@@ -4,7 +4,13 @@ const nextConfig = {}
 module.exports = nextConfig
 ```
 
-### **`.gitignore`**
+That's it! Just those 3 lines.
+
+---
+
+## **Also Double-Check `.gitignore`**
+
+Make sure your `.gitignore` file exists separately and contains:
 ```
 # dependencies
 /node_modules
