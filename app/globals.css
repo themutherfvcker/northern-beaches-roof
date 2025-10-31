@@ -25,36 +25,3 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-```
-
-### **5. Check Your File Structure**
-
-Make sure you have these exact folders and files:
-```
-northern-beaches-roof/
-├── app/
-│   ├── [suburb]/
-│   │   └── page.tsx ✅
-│   ├── api/
-│   │   └── leads/
-│   │       └── route.ts ✅
-│   ├── layout.tsx ✅ (NOT layout.ts)
-│   ├── page.tsx ✅
-│   └── globals.css ✅
-├── components/
-│   ├── Hero.tsx ✅
-│   ├── Services.tsx ✅
-│   ├── Gallery.tsx ✅
-│   ├── Testimonials.tsx ✅
-│   ├── LeadForm.tsx ✅
-│   └── Footer.tsx ✅
-├── lib/
-│   ├── supabase.ts ✅
-│   ├── suburbs.ts ✅
-│   └── seo.ts ✅
-├── package.json ✅
-├── tsconfig.json ✅
-├── tailwind.config.ts ✅
-├── next.config.js ✅
-├── postcss.config.js ✅
-└── .gitignore ✅
