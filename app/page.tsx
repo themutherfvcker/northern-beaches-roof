@@ -1,8 +1,17 @@
+import Hero from '@/components/Hero'
+import Services from '@/components/Services'
+import Gallery from '@/components/Gallery'
+import Testimonials from '@/components/Testimonials'
+import Footer from '@/components/Footer'
+
 export default function Home() {
   return (
-    <div style={{ padding: '50px', textAlign: 'center' }}>
-      <h1>TEST - Site is Working!</h1>
-      <p>If you see this, routing is working.</p>
-    </div>
+    <main>
+      <Hero />
+      <Services />
+      <Gallery />
+      <Testimonials />
+      <Footer />
+    </main>
   )
 }
